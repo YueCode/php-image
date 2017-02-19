@@ -1,0 +1,14 @@
+{
+    "name": "yuecode/image",
+    "description": "Qcloud Image Service",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bestony",
+            "email": "xiqingongzi@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
