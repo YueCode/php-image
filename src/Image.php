@@ -198,12 +198,12 @@ class Image
     public static function generateResUrl($userid = 0, $fileid = null, $oper = '') {
         if ($fileid) {
             if ($oper) {
-                return Conf::API_IMAGE_END_POINT . Conf::APPID . '/' . $userid . '/' . $fileid . '/' . $oper;
+                return Conf::API_IMAGE_END_POINT . config('image.APPID') . '/' . $userid . '/' . $fileid . '/' . $oper;
             } else {
-                return Conf::API_IMAGE_END_POINT . Conf::APPID . '/' . $userid . '/' . $fileid;
+                return Conf::API_IMAGE_END_POINT . config('image.APPID') . '/' . $userid . '/' . $fileid;
             }
         } else {
-            return Conf::API_IMAGE_END_POINT . Conf::APPID . '/' . $userid;
+            return Conf::API_IMAGE_END_POINT . config('image.APPID') . '/' . $userid;
         }
     }
 }

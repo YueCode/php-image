@@ -22,8 +22,8 @@ class ImageProcess
             return $data;
         }
         $data = array(
-            'bucket'=>Conf::BUCKET,
-            'appid'=>Conf::APPID,
+            'bucket'=>config('image.BUCKET'),
+            'appid'=>config('image.APPID'),
             'url'=>($pronDetectUrl));
 
         $reqData =  json_encode($data);
@@ -55,8 +55,8 @@ class ImageProcess
             return $data;
         }
         $data = array(
-            'bucket'=>Conf::BUCKET,
-            'appid'=>Conf::APPID,
+            'bucket'=>config('image.BUCKET'),
+            'appid'=>config('image.APPID'),
             'url_list'=>($pornUrl));
 
         $reqData =  json_encode($data);
@@ -88,8 +88,8 @@ class ImageProcess
             return $data;
         }
         $data = array(
-            'appid' => Conf::APPID,
-            'bucket' => Conf::BUCKET,
+            'bucket'=>config('image.BUCKET'),
+            'appid'=>config('image.APPID'),
         );
         for($i = 0; $i < count($pornFile); $i++){
             if(PATH_SEPARATOR==';'){    // WIN OS

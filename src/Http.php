@@ -66,9 +66,9 @@ class Http
         curl_setopt(self::$_curlHandler, CURLOPT_HTTPHEADER, $header);
         curl_setopt(self::$_curlHandler, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt(self::$_curlHandler, CURLOPT_CUSTOMREQUEST, $method);
-        if (defined('CURLOPT_SAFE_UPLOAD')) {
-            curl_setopt(self::$_curlHandler, CURLOPT_SAFE_UPLOAD, false);
-        }
+//        if (defined('CURLOPT_SAFE_UPLOAD')) {
+//            curl_setopt(self::$_curlHandler, CURLOPT_SAFE_UPLOAD, false);
+//        }
         isset($rq['timeout']) && curl_setopt(self::$_curlHandler, CURLOPT_TIMEOUT, $rq['timeout']);
         isset($rq['data']) && in_array($method, array('POST', 'PUT')) && curl_setopt(self::$_curlHandler, CURLOPT_POSTFIELDS, $rq['data']);
         $ssl = substr($rq['url'], 0, 8) == "https://" ? true : false;

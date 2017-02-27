@@ -16,9 +16,9 @@ class Auth
      * @return userid          用户userid，建议不指定
      */
     public static function getAppSignV2($bucket, $fileid, $expired, $userid = '0') {
-        $secretId = Conf::SECRET_ID;
-        $secretKey = Conf::SECRET_KEY;
-        $appid = Conf::APPID;
+        $secretId = config('image.SECRET_ID');
+        $secretKey = config('image.SECRET_KEY');
+        $appid = config('image.APPID');
 
         if (empty($secretId) || empty($secretKey) || empty($appid)) {
             ImageV2::setMessageInfo(-1,"sign error");
@@ -47,14 +47,14 @@ class Auth
      * @param  string $url     请求的鉴黄url
      */
     public static function getPornDetectSign($url = null) {
-        $secretId = Conf::SECRET_ID;
-        $secretKey = Conf::SECRET_KEY;
+        $secretId = config('image.SECRET_ID');
+        $secretKey = config('image.SECRET_KEY');
         if (empty($secretId) || empty($secretKey)) {
             return false;
         }
 
-        $appid = Conf::APPID;
-        $bucket = Conf::BUCKET;
+        $appid = config('image.APPID');
+        $bucket = config('image.BUCKET');
         $expired = time() + 1000;
         $current = time();
 
@@ -73,8 +73,8 @@ class Auth
      * @deprecated deprecated since v2
      */
     public static function appSign($url, $expired) {
-        $secretId = Conf::SECRET_ID;
-        $secretKey = Conf::SECRET_KEY;
+        $secretId = config('image.SECRET_ID');
+        $secretKey = config('image.SECRET_KEY');
         if (empty($secretId) || empty($secretKey)) {
             return self::AUTH_SECRET_ID_KEY_ERROR;
         }
@@ -117,8 +117,8 @@ class Auth
      * @return string          签名
      */
     public static function appSign_once($fileid, $userid = '0') {
-        $secretId = Conf::SECRET_ID;
-        $secretKey = Conf::SECRET_KEY;
+        $secretId = config('image.SECRET_ID');
+        $secretKey = config('image.SECRET_KEY');
         $appid = Conf::APPID;
 
         if (empty($secretId) || empty($secretKey) || empty($appid)) {
@@ -149,8 +149,8 @@ class Auth
      * @return string          签名
      */
     public static function appSign_more($expired,$userid = '0') {
-        $secretId = Conf::SECRET_ID;
-        $secretKey = Conf::SECRET_KEY;
+        $secretId = config('image.SECRET_ID');
+        $secretKey = config('image.SECRET_KEY');
         $appid = Conf::APPID;
 
         if (empty($secretId) || empty($secretKey) || empty($appid)) {
