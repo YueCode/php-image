@@ -122,7 +122,7 @@ class YouTu
     }
 
     /**
-     * 查看文件ID
+     * 删除视频文件
      * @param $fileid
      * @param int $userid
      * @return array
