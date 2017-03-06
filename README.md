@@ -7,7 +7,7 @@
 
 执行 `composer` 命令安装拓展
 ```
-composer require yuecode/image
+composer require yuecode/image:dev-master
 ```
 
 在`config/app.php`中的 Provider 中添加
