@@ -1,6 +1,6 @@
 <?php
 
-namespace Yuecode\Image;
+namespace YueCode\Image;
 
 
 class ImageProcess

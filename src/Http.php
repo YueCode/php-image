@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Yuecode\Image;
+namespace YueCode\Image;
 
 
 function my_curl_reset($handler)
